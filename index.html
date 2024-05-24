@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Restaurant</title>
+  </head>
+  <body>
+    <section>
+      <h3>Galeria d'imatges</h3>
+      <div class="gallery">
+        <div class="image-container">
+          <img src="IMAGES/plat1.jpg" alt="Imatge plat de verdures" />
+        </div>
+        <div class="image-container">
+          <img src="IMAGES/plat2.jpg" alt="Imatge plat despaguettis" />
+        </div>
+        <div class="image-container">
+          <img src="IMAGES/plat3.jpg" alt="Imatge plat de salmó amb verdures" />
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>Imatge responsiva</h3>
+      <picture>
+        <source
+          media="(min-width:1024px)"
+          srcset="IMAGES/img_responsive2.png"
+          alt="mesa de restaurante"
+        />
+        <source
+          media="(min-width:640px)"
+          srcset="IMAGES/img_responsive2(1024).png"
+          alt="mesa de restaurante"
+        />
+        <img src="IMAGES/img_responsive2(640).png" alt="mesa de restaurante" />
+      </picture>
+    </section>
+    <section>
+      <h3>Animació</h3>
+      <div class="css_div">Capa</div>
+    </section>
+    <section>
+      <h3>Video</h3>
+      <video id="video" muted loop id="video">
+        <source src="VIDEOS/video.mp4" type="video/mp4" />
+      </video>
+      <div id="footervideo">
+        <button id="play" onclick="play()">
+          <span class="material-symbols-outlined"> play_arrow </span>
+        </button>
+        <button id="pause" onclick="pause()">
+          <span class="material-symbols-outlined"> pause </span>
+        </button>
+      </div>
+    </section>
+    <script>
+
+	  function pause(){
+		video.pause();
+		console.log("El video esta parat");
+	  }
+      function play(){
+		video.play();
+		console.log("S'esta reproduint");
+	  }
+    </script>
+  </body>
+</html>
